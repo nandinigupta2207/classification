@@ -28,7 +28,7 @@ with col2:
     tue=st.slider("Time using technology devices",0.0,12.0)
     calc=st.selectbox("Consumption of alcohol", options=['no', 'Sometimes', 'Frequently', 'Always'])
     mtrans=st.selectbox("Mode of transportation", options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike','Bike'])
-with open('rf_model.pkl', 'rb') as rf:
+'''with open('rf_model.pkl', 'rb') as rf:
     model = pickle.load(rf)
 # load the StandardScaler
 with open('scaler.pkl', 'rb') as mm:
@@ -55,3 +55,4 @@ if button:
         # make prediction
         result = predict(Normal_Weight, Overweight_Level_I, Overweight_Level_II,Obesity_Type_I, Insufficient_Weight, Obesity_Type_II,Obesity_Type_III)
         st.success(f'The obesity type is ${result}')
+'''
