@@ -11,7 +11,7 @@ with col1:
     #st.text("Sepal characteristics")
     #gender = st.selectbox("Gender",("Male","Female"), label_visibility=st.session_state.visibility, disabled=st.session_state.disabled,)
     age = st.slider("Age",100, 10)
-    ht = st.slider("Height(m)", 2, 1, step=0.1, format="%0.1f")
+    ht = st.slider("Height(m)", 2, 1, step=0.1)
     
 with col2:
     #st.text("Pepal characteristics")
