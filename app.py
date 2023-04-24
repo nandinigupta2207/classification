@@ -16,10 +16,19 @@ with col1:
     history=st.selectbox("Family history of obesity",options=["Yes","No"])
     favc=st.selectbox("Frequent consumption of high caloric food ",options=["Yes","No"])
     fcvc=st.slider("Frequency of consumption of vegetables",1.0,4.0,step=0.1,format="%0.2f")
-    ncp=st.slider("Number of main meals",1.0,5.0,step=1)
+    ncp=st.slider("Number of main meals",1.0,5.0,step=0.1)
     
 with col2:
     #st.text("Pepal characteristics")
-    petal_l = st.slider("Petal lenght (cm)", 1.0, 7.0, 0.5)
-    petal_w = st.slider("Petal width (cm)", 0.1, 2.5, 0.5)
+    caec = st.selectbox("Consumption of food between meals", options=["Sometimes", "Frequently","Always","no"])
+    smoke=st.selectbox("do you smoke", options=["yes","no"])
+    ch20=st.slider("Consumption of water daily(L)",1.0,4.0,step=0.1)
+    scc=st.selectbox("Calories consumption monitoring", options=["no","yes"])
+    faf=st.slider("Physical activity frequency per day",1.0,3.0,step=0.5)
+    tue=st.slider("Time using technology devices",0.0,12.0)
+    calc=st.selectbox("Consumption of alcohol", options=['no', 'Sometimes', 'Frequently', 'Always'])
+    mtrans=st.selectbox("Mode of transportation", options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike',
+       'Bike'])
+   
+   
 st.button("Predict type of Iris")
