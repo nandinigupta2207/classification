@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from prediction import predict
+from prediction import predict
 
 st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
 st.markdown("FIND YOUR WAY TO HEALTH")
