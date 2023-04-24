@@ -16,7 +16,7 @@ with col1:
     history=st.selectbox("Family history of obesity",options=["Yes","No"])
     favc=st.selectbox("Frequent consumption of high caloric food ",options=["Yes","No"])
     fcvc=st.slider("Frequency of consumption of vegetables",1.0,4.0,step=0.1,format="%0.2f")
-    ncp=st.slider("Number of main meals",1.0,5.0,step=0.1)
+    ncp=st.slider("Number of main meals",1.0,5.0,step=1)
     
 with col2:
     #st.text("Pepal characteristics")
