@@ -30,4 +30,4 @@ with col2:
     mtrans=st.selectbox("Mode of transportation", options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike','Bike'])
    
    
-st.button("Predict type of Iris")
+st.button("Predict type of obesity")
