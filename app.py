@@ -9,8 +9,7 @@ st.header("LIFESTYLE CHOICES")
 col1, col2 = st.columns(2)
 with col1:
     #st.text("Sepal characteristics")
-    gender = st.selectbox("Gender",("Male","Female"), label_visibility=st.session_state.visibility,
-        disabled=st.session_state.disabled,)
+    #gender = st.selectbox("Gender",("Male","Female"), label_visibility=st.session_state.visibility, disabled=st.session_state.disabled,)
     age = st.slider("Age", 2.0, 100, 10)
     ht = st.slider("Height(m)", 2.0, 2, 1)
     
