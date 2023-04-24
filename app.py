@@ -27,8 +27,7 @@ with col2:
     faf=st.slider("Physical activity frequency per day",1.0,3.0,step=0.5)
     tue=st.slider("Time using technology devices",0.0,12.0)
     calc=st.selectbox("Consumption of alcohol", options=['no', 'Sometimes', 'Frequently', 'Always'])
-    mtrans=st.selectbox("Mode of transportation", options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike',
-       'Bike'])
+    mtrans=st.selectbox("Mode of transportation", options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike','Bike'])
    
    
 st.button("Predict type of Iris")
