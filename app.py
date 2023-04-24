@@ -17,4 +17,3 @@ with col2:
     petal_l = st.slider("Petal lenght (cm)", 1.0, 7.0, 0.5)
     petal_w = st.slider("Petal width (cm)", 0.1, 2.5, 0.5)
 st.button("Predict type of Iris")
-streamlit run app.py
