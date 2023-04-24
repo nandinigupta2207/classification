@@ -38,7 +38,7 @@ def predict(Normal_Weight, Overweight_Level_I, Overweight_Level_II,Obesity_Type_
     # processing user input
     ocean = 0 if ocean_pro == '<1H OCEAN' else 1 if ocean_pro == 'INLAND' else 2 if ocean_pro == 'ISLAND' else 3 if ocean_pro == 'NEAR BAY' else 4
     med_income = median_income / 5
-    lists = [Normal_Weight, Overweight_Level_I, Overweight_Level_II,Obesity_Type_I, Insufficient_Weight, Obesity_Type_II,Obesity_Type_III`]
+    lists = [Normal_Weight, Overweight_Level_I, Overweight_Level_II,Obesity_Type_I, Insufficient_Weight, Obesity_Type_II,Obesity_Type_III]
     
     df = pd.DataFrame(lists).transpose()
     # scaling the data
