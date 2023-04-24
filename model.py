@@ -1,5 +1,6 @@
 import joblib
 import pandas as pd
+import pickle
 df=pd.read_csv("C:\\Users\\Nandini Gupta\\Downloads\\ObesityDataSet_raw_and_data_sinthetic.csv")
 print(df.head())
 df_prep = df.copy()
@@ -26,6 +27,9 @@ clf_mm_scaled = model.fit(X_train_mm_scaled, y_train)
 clf_scaled = model.fit(X_train_mm_scaled,y_train)
 y_pred_mm_scaled = clf_scaled.predict(X_test_mm_scaled)
 
-joblib.dump(model,"rf_model.sav")
+pickle.dump(model, open('rf_model.pkl', 'wb'))
+# saving StandardScaler
+pickle.dump(mm, open('scaler.pkl', 'wb'))
+
 
 
