@@ -10,10 +10,6 @@ col1, col2 = st.columns(2)
 with col1:
     #st.text("Sepal characteristics")
     g = st.selectbox("Select your gender", options=["Male", "Female"])
-    ig g="Male":
-        gender=
-    else:
-        gender=
     age = st.slider("Age",100, 10)
     height = st.slider("Select your height", 1.0, 2.0, step=0.01, format="%0.2f")
     weight=st.slider("Select  your height", 0.0, 300.0)
