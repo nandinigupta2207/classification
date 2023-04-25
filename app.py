@@ -171,6 +171,8 @@ if st.button("Predict type of obesity"):
         inp.append(0)
         inp.append(0)
         inp.append(1)
+    
+    st.write(input)
 
     input_arr = np.array(input)
     input_arr_scaled = mm.transform(input_arr)
