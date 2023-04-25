@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeClassifier
 # -----------------------------------------------------------
 
-df=pd.read_csv(r"ObesityDataSet_raw_and_data_sinthetic.csv")
+df=pd.read_csv(r"https://raw.githubusercontent.com/nandinigupta2207/classification/main/ObesityDataSet_raw_and_data_sinthetic.csv")
 df_prep = df.copy()
 
 # create dummy variables
