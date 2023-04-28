@@ -170,7 +170,7 @@ if st.button("Predict type of obesity"):
         inp.append(1)
         inp.append(0)
         inp.append(0)
-    elif mtrans == 'Public Transport':
+    elif mtrans == 'Public_Transportation':
         inp.append(0)
         inp.append(0)
         inp.append(0)
