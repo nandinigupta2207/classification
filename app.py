@@ -207,24 +207,24 @@ if st.button("Predict type of obesity"):
     if result=='Overweight_Level_II':
         st.success(f'The obesity type is {result}')
         #st.write(f'The obesity type i{result}')
-        st.write(f'BMI between 30.0 and 34.9, Increased risk for the same health problems as those in Overweight Level I, but at a higher risk due to the increased amount of excess body fat.')
+        st.write(f'BMI between 30.0 and 34.9, Increased risk for the same health problems as those in Overweight Level I: Increased risk for health problems such as high blood pressure, high cholesterol, heart disease, stroke, type 2 diabetes, sleep apnea, and certain cancers, but at a higher risk due to the increased amount of excess body fat.')
         st.write(f'Similar to Overweight Level I, aim to achieve a modest weight loss of 5-10% of your body weight through a combination of healthy eating and regular physical activity. Consulting with a healthcare professional or registered dietitian can help you develop a personalized weight loss plan and provide guidance and support along the way.')
     if result=='Obesity_Type_I':
         st.success(f'The obesity type is {result}')
         #st.write(f'The obesity type i{result}')
-        st.write(f'BMI between 35.0 and 39.9 ,Increased risk for the same health problems as those in Overweight Level II, as well as other health problems such as gallbladder disease, osteoarthritis, and infertility.')
+        st.write(f'BMI between 35.0 and 39.9 ,Increased risk for the same health problems as those in Overweight Level II: Increased risk for health problems such as high blood pressure, high cholesterol, heart disease, stroke, type 2 diabetes, sleep apnea, and certain cancers, but at a higher risk due to the increased amount of excess body fat. As well as other health problems such as gallbladder disease, osteoarthritis, and infertility.')
         st.write(f'A weight loss of 5-10% of your body weight can provide significant health benefits. However, for individuals with severe obesity, a greater amount of weight loss may be needed to improve health. Consultation with a healthcare professional or registered dietitian can help develop a personalized weight loss plan that includes a combination of a healthy diet, physical activity, and potentially other interventions such as medication or bariatric surgery.')
     if result=='Obesity_Type_II':
         st.success(f'The obesity type is {result}')
         #st.write(f'The obesity type i{result}')
-        st.markdown("<h4 style='text-align: center; color: orange;'>BMI between 40.0 and 44.9, Increased risk for the same health problems as those in Obesity Type I, but at a higher risk due to the increased amount of excess body fat.</h4>", unsafe_allow_html=True)
-        st.write(f'BMI between 40.0 and 44.9, Increased risk for the same health problems as those in Obesity Type I, but at a higher risk due to the increased amount of excess body fat.')
+        #st.markdown("<h4 style='text-align: center; color: orange;'>BMI between 40.0 and 44.9, Increased risk for the same health problems as those in Obesity Type I, but at a higher risk due to the increased amount of excess body fat.</h4>", unsafe_allow_html=True)
+        st.write(f'BMI between 40.0 and 44.9, Increased risk for the same health problems as those in Obesity Type I:Increased risk for health problems such as high blood pressure, high cholesterol, heart disease, stroke, type 2 diabetes, sleep apnea, and certain cancers, but at a higher risk due to the increased amount of excess body fat. But at a higher risk due to the increased amount of excess body fat.')
         st.write(f'A weight loss of 5-10% of your body weight can provide significant health benefits. However, for individuals with severe obesity, a greater amount of weight loss may be needed to improve health. Consultation with a healthcare professional or registered dietitian can help develop a personalized weight loss plan that includes a combination of a healthy diet, physical activity, and potentially other interventions such as medication or bariatric surgery.')
     if result=='Obesity_Type_III':
         st.success(f'The obesity type is {result}')
         #st.write(f'The obesity type i{result}')
         #st.markdown("<h4 style='text-align: center; color: orange;'>BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II, but at a higher risk due to the significantly higher amount of excess body fat.</h4>", unsafe_allow_html=True)
-        st.write(f'BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II, but at a higher risk due to the significantly higher amount of excess body fat.')
+        st.write(f'BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II:Increased risk for health problems such as high blood pressure, high cholesterol, heart disease, stroke, type 2 diabetes, sleep apnea, and certain cancers, but at a higher risk due to the increased amount of excess body fat. But at a higher risk due to the significantly higher amount of excess body fat.')
         st.write(f'A weight loss of 5-10% of your body weight can provide significant health benefits. However, for individuals with severe obesity, a greater amount of weight loss may be needed to improve health. Consultation with a healthcare professional or registered dietitian can help develop a personalized weight loss plan that includes a combination of a healthy diet, physical activity, and potentially other interventions such as medication or bariatric surgery.')
     if result=='Insufficient_Weight':
         st.success(f'The obesity type is {result}')
