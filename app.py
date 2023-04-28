@@ -35,10 +35,10 @@ clf_mm_scaled = model.fit(X_train_mm_scaled, y_train)
 clf_scaled = model.fit(X_train_mm_scaled,y_train)
 y_pred_mm_scaled = clf_scaled.predict(X_test_mm_scaled)
 # -----------------------------------------------------------
-st.set_page_config(page_title="App Deployment", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Obesity Prediction", page_icon="🍕", layout="wide", initial_sidebar_state="expanded")
 #st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
-st.markdown("<h1 style='text-align: center; color: orange;'>"Uncovering Hidden Relationships: Obesity, Lifestyle Expressions</h1>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center; color: orange;'>"FIND YOUR WAY TO HEALTH</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: orange;'>Uncovering Hidden Relationships: Obesity, Lifestyle Expressions</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: orange;'>FIND YOUR WAY TO HEALTH</h1>", unsafe_allow_html=True)
 st.header("LIFESTYLE CHOICES")
 col1, col2 = st.columns(2)
 inp=[]
