@@ -199,7 +199,7 @@ if st.button("Predict type of obesity"):
     if result=='Normal_Weight':
         st.success(f'The obesity type i{result}')
         #st.write(f'The obesity type i{result}')
-        st.write(f"<span style='color:red'>'BMI between 18.5 and 24.9 ,Generally considered to have a lower risk of health problems compared to other BMI categories. However, even within the "normal weight" BMI range, individuals who have a high percentage of body fat or poor lifestyle habits may still be at risk for certain health issues.'</span>")
+        st.write(f"<span style='color:red'>'BMI between 18.5 and 24.9 ,Generally considered to have a lower risk of health problems compared to other BMI categories. However, even within the normal weight BMI range, individuals who have a high percentage of body fat or poor lifestyle habits may still be at risk for certain health issues.'</span>")
         st.write(f"<span style='color:red'>'Maintain a healthy lifestyle that includes a balanced diet, regular physical activity, adequate sleep, stress management, and avoiding smoking and excessive alcohol consumption. It is important to continue to monitor your weight and health to ensure that you maintain a healthy BMI.'</span>")
     if result=='Overweight_Level_I':
         st.success(f'The obesity type i{result}')
