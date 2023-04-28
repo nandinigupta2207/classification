@@ -43,6 +43,22 @@ st.header("LIFESTYLE CHOICES")
 col1, col2 = st.columns(2)
 inp=[]
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
+
 with col1:
     # st.text("Sepal characteristics")
     gen = st.selectbox("Select your gender", options=["Male", "Female"])
@@ -193,4 +209,5 @@ if st.button("Predict type of obesity"):
     # make prediction
     result = model.predict([inp])[0]
     st.success(f'The obesity type is{result}')
-    st.write(f'The obesity type is{result}')
+    st.write(f'The obesity type is {result}')
+    
