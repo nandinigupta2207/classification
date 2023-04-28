@@ -5,6 +5,7 @@ import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.tree import DecisionTreeClassifier
+
 # -----------------------------------------------------------
 
 df=pd.read_csv(r"https://raw.githubusercontent.com/nandinigupta2207/classification/main/ObesityDataSet_raw_and_data_sinthetic.csv")
@@ -34,7 +35,7 @@ clf_mm_scaled = model.fit(X_train_mm_scaled, y_train)
 clf_scaled = model.fit(X_train_mm_scaled,y_train)
 y_pred_mm_scaled = clf_scaled.predict(X_test_mm_scaled)
 # -----------------------------------------------------------
-
+st.set_page_config(page_title="App Deployment", page_icon=":guardsman:", layout="wide", initial_sidebar_state="expanded", background_color="#f5f5f5")
 st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
 st.markdown("FIND YOUR WAY TO HEALTH")
 st.header("LIFESTYLE CHOICES")
@@ -186,9 +187,9 @@ if st.button("Predict type of obesity"):
     
     input_arr = np.array(inp)
     #input_arr_scaled = mm.transform(input_arr)
-    input_arr.reshape(-1,1)
+    input_arr = input_arr.reshape(1, -1)
 
     # make prediction
-    result = model.predict(input_arr)
+    result = model.predict([inp])[0]
     st.success(f'The obesity type i{result}')
     st.write(f'The obesity type i{result}')
