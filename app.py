@@ -35,7 +35,7 @@ clf_mm_scaled = model.fit(X_train_mm_scaled, y_train)
 clf_scaled = model.fit(X_train_mm_scaled,y_train)
 y_pred_mm_scaled = clf_scaled.predict(X_test_mm_scaled)
 # ----------------------------------------------------------
-st.set_page_config(page_title="Obesity Prediction", page_icon='https://fontawesome.com/v5/icons/coffee?f=classic&s=solid', layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Obesity Prediction", page_icon='f0f4', layout="wide", initial_sidebar_state="expanded")
 st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
 st.markdown("FIND YOUR WAY TO HEALTH")
 st.header("LIFESTYLE CHOICES")
