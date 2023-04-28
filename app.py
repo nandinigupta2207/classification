@@ -39,7 +39,7 @@ st.set_page_config(page_title="Obesity Prediction", page_icon="🍕", layout="wi
 
 
 #st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
-st.markdown("<h1 style='text-align: center; color: blue;'> Uncovering Hidden Relationships: Obesity, Lifestyle Expressions</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: orange;'> Uncovering Hidden Relationships: Obesity, Lifestyle Expressions</h1>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: orange;'>FIND YOUR WAY TO HEALTH</h1>", unsafe_allow_html=True)
 #st.markdown("FIND YOUR WAY TO HEALTH")
 st.header("LIFESTYLE CHOICES")
