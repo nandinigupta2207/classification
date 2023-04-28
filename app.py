@@ -48,7 +48,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://raw.githubusercontent.com/adhok/SeeFood/main/luxury-ornamental-mandala-design-background_1159-6794.jpg");
+             background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ffood-menu-background&psig=AOvVaw1KCoRD79R3RIuCeVyLxUZ5&ust=1682794664345000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIC-peSgzf4CFQAAAAAdAAAAABAe");
              background-attachment: fixed;
              background-size: cover
          }}
