@@ -48,7 +48,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://raw.githubusercontent.com/nandinigupta2207/classification/food.jpg");
+             background-image: url("food.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
