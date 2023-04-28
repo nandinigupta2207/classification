@@ -225,7 +225,7 @@ if st.button("Predict type of obesity"):
     if result=='Obesity_Type_III':
         st.success(f'The obesity type is {result}')
         #st.write(f'The obesity type i{result}')
-        st.markdown("<h4 style='text-align: center; color: orange;'>BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II, but at a higher risk due to the significantly higher amount of excess body fat.</h4>", unsafe_allow_html=True)
+        #st.markdown("<h4 style='text-align: center; color: orange;'>BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II, but at a higher risk due to the significantly higher amount of excess body fat.</h4>", unsafe_allow_html=True)
         st.write(f'BMI 45 or above, Increased risk for the same health problems as those in Obesity Type II, but at a higher risk due to the significantly higher amount of excess body fat.')
         st.write(f'A weight loss of 5-10% of your body weight can provide significant health benefits. However, for individuals with severe obesity, a greater amount of weight loss may be needed to improve health. Consultation with a healthcare professional or registered dietitian can help develop a personalized weight loss plan that includes a combination of a healthy diet, physical activity, and potentially other interventions such as medication or bariatric surgery.')
     if result=='Insufficient_Weight':
