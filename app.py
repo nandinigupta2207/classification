@@ -194,6 +194,6 @@ if st.button("Predict type of obesity"):
     #input_arr = input_arr.reshape(1, -1)
 
     # make prediction
-    result = model.predict([[inp]])[0]
+    result = model.predict([inp])[0]
     st.success(f'The obesity type is{result}')
     st.write(f'The obesity type is{result}')
