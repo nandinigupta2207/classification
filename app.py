@@ -3,16 +3,16 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.tree import DecisionTreeClassifier
+from sklearn import svm
 
 # -----------------------------------------------------------
 
 df=pd.read_csv(r"https://raw.githubusercontent.com/nandinigupta2207/classification/main/ObesityDataSet_raw_and_data_sinthetic.csv")
 df_prep = df.copy()
+df_prep.drop(['SCC','MTRANS','TUE'],axis=1,inplace=True)
 
 # create dummy variables
-df_prep = pd.get_dummies(df_prep,columns=["Gender","family_history_with_overweight","FAVC","CAEC","SMOKE","SCC","CALC","MTRANS"])
+df_prep = pd.get_dummies(df_prep,columns=["Gender","family_history_with_overweight","FAVC","CAEC","SMOKE","CALC"])
 
 # split dataset in features and target variable
 # Features
@@ -25,15 +25,11 @@ y = df_prep['NObeyesdad']
 # Import train_test_split function
 
 # Split dataset into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42,stratify=y)
 
-mm = MinMaxScaler()
-X_train_mm_scaled = mm.fit_transform(X_train)
-X_test_mm_scaled = mm.transform(X_test)
-model=DecisionTreeClassifier()
-clf_mm_scaled = model.fit(X_train_mm_scaled, y_train)
-clf_scaled = model.fit(X_train_mm_scaled,y_train)
-y_pred_mm_scaled = clf_scaled.predict(X_test_mm_scaled)
+svc = svm.SVC(C=1000, kernel='linear')
+clf = svc.fit(X_train, y_train)
+y_pred= clf.predict(X_test)
 # -----------------------------------------------------------
 st.set_page_config(page_title="Obesity Prediction", page_icon="🍕", layout="wide", initial_sidebar_state="expanded")
 #st.title("Uncovering Hidden Relationships: Obesity, Lifestyle Expressions")
@@ -65,15 +61,10 @@ with col2:
     smoke = st.selectbox("do you smoke", options=["Yes", "No"])
     ch20 = st.slider("Consumption of water daily(L)", 1.0, 4.0, step=0.1)
     inp.append(ch20)
-    scc = st.selectbox("Calories consumption monitoring", options=["No", "Yes"])
     faf = st.slider("Physical activity frequency per day", 1.0, 3.0, step=0.5)
     inp.append(faf)
-    tue = st.slider("Time using technology devices", 0.0, 12.0)
     inp.append(tue)
     calc = st.selectbox("Consumption of alcohol", options=['No', 'Sometimes', 'Frequently', 'Always'])
-    mtrans = st.selectbox("Mode of transportation",
-                          options=['Public_Transportation', 'Walking', 'Automobile', 'Motorbike', 'Bike'])
-
 if st.button("Predict type of obesity"):
     if gen == 'Female':
         inp.append(1)
@@ -123,13 +114,6 @@ if st.button("Predict type of obesity"):
     elif smoke == 'Yes':
         inp.append(0)
         inp.append(1)
-    #scc = int(input("Do you monitor your calorie consumption: yes(1), no(0)"))
-    if scc == 'No':
-        inp.append(1)
-        inp.append(0)
-    elif scc == 'Yes':
-        inp.append(0)
-        inp.append(1)
     #calc = int(input("Consumption of alcohol: Always(1),Frequently(2),Sometimes(3),No(4)"))
     if calc == 'Always':
         inp.append(1)
@@ -150,39 +134,7 @@ if st.button("Predict type of obesity"):
         inp.append(0)
         inp.append(0)
         inp.append(0)
-        inp.append(1)
-    #mtrans = int(input("What mode of transportation do you use: Automobile(1), Bike(2), Motorbike(3), Public Transport(4), Walking(5)"))
-    if mtrans == 'Automobile':
-        inp.append(1)
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-    elif mtrans == 'Bike':
-        inp.append(0)
-        inp.append(1)
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-    elif mtrans == 'Motorbike':
-        inp.append(0)
-        inp.append(0)
-        inp.append(1)
-        inp.append(0)
-        inp.append(0)
-    elif mtrans == 'Public_Transportation':
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-        inp.append(1)
-        inp.append(0)
-    elif mtrans =='Walking':
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-        inp.append(0)
-        inp.append(1)
-    
+        inp.append(1)  
     st.write(input)
 
     
@@ -191,7 +143,7 @@ if st.button("Predict type of obesity"):
     input_arr = input_arr.reshape(1, -1)
 
     # make prediction
-    result = model.predict([inp])[0]
+    result = svc.predict([inp])[0]
     #st.success(f'The obesity type i{result}')
 
     if result=='Normal_Weight':
