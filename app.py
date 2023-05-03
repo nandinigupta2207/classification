@@ -50,13 +50,17 @@ with col1:
     inp.append(weight)
     fm = st.selectbox("Family history of obesity", options=["Yes", "No"])
     favc = st.selectbox("Frequent consumption of high caloric food ", options=["Yes", "No"])
+    #fcvc = st.slider("Frequency of consumption of vegetables", 1.0, 4.0, step=0.1, format="%0.2f")
+    #inp.append(fcvc)
+    #ncp = st.slider("Number of main meals", 1.0, 5.0, step=0.1)
+    #inp.append(ncp)
+
+with col2:
+    # st.text("Pepal characteristics")
     fcvc = st.slider("Frequency of consumption of vegetables", 1.0, 4.0, step=0.1, format="%0.2f")
     inp.append(fcvc)
     ncp = st.slider("Number of main meals", 1.0, 5.0, step=0.1)
     inp.append(ncp)
-
-with col2:
-    # st.text("Pepal characteristics")
     caec = st.selectbox("Consumption of food between meals", options=["Sometimes", "Frequently", "Always", "No"])
     smoke = st.selectbox("do you smoke", options=["Yes", "No"])
     ch20 = st.slider("Consumption of water daily(L)", 1.0, 4.0, step=0.1)
