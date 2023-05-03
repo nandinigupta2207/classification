@@ -63,7 +63,6 @@ with col2:
     inp.append(ch20)
     faf = st.slider("Physical activity frequency per day", 1.0, 3.0, step=0.5)
     inp.append(faf)
-    inp.append(tue)
     calc = st.selectbox("Consumption of alcohol", options=['No', 'Sometimes', 'Frequently', 'Always'])
 if st.button("Predict type of obesity"):
     if gen == 'Female':
